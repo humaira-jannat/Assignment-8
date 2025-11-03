@@ -22,7 +22,7 @@ import {useLocation, useNavigate} from "react-router";
                     <span className="font-bold text-xl text-primary">HERO.IO</span>
                     </button>
             </div>
-            {/*desktop navigation center sec*/}
+        
               <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
 
                 <ul className="menu menu-horizontal px-1 space-x-8">
@@ -33,13 +33,12 @@ import {useLocation, useNavigate} from "react-router";
                             Home
                         </button>
                     </li>
-                    <li>
-                        <button
-                        className={navLinkClass ("/apps")}
-                        onClick={() => navigate ("/apps")}>
-                            Apps
-                        </button>
-                    </li>
+                    <li><button
+          className={navLinkClass("/all-apps")}
+         onClick={() => navigate("/all-apps")}>
+                Apps
+            </button>
+              </li>
                    
                     <li>
                         <button
@@ -50,7 +49,6 @@ import {useLocation, useNavigate} from "react-router";
                     </li>
                 </ul>
             </div>
-            {/* right section*/}
             <div className="hidden md:flex">
                 <a href="https://github.com/humaira-jannat" target ="_blank" 
                 rel="noopener noreferrer"
@@ -81,7 +79,7 @@ import {useLocation, useNavigate} from "react-router";
                     className="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor">
+                    stroke="#7b61ff">
                         <path strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
@@ -101,14 +99,16 @@ import {useLocation, useNavigate} from "react-router";
                             </button>
                         </li>
                         <li>
-                        <button
-                        className={navLinkClass("/apps")}
-                        onClick={()=> {
-                            navigate("/apps");
-                            SetIsMenuOpen(false);
-                        }}>
-                            Apps
-                        </button>
+                       <button
+  className={navLinkClass("/all-apps")}
+  onClick={() => {
+    navigate("/all-apps");
+    SetIsMenuOpen(false);
+  }}
+>
+  Apps
+</button>
+
                         </li>
                         <li>
                         <button
