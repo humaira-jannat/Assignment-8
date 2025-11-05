@@ -12,7 +12,12 @@ const AppNotFoundIllustration = () => (
 
 export default function AppNotFound({ setCurrentPage }) {
   const handleGoBack = () => {
-    if (setCurrentPage) setCurrentPage("apps");
+    if (setCurrentPage) {
+      setCurrentPage("home"); 
+    } else {
+      
+      window.location.href = "/";
+    }
   };
 
   return (
@@ -24,10 +29,11 @@ export default function AppNotFound({ setCurrentPage }) {
       </p>
       <button
         onClick={handleGoBack}
-        className="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700"
+        className="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-indigo-700 transition-colors"
       >
         Go Back
       </button>
     </div>
   );
 }
+
