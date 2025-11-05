@@ -1,5 +1,7 @@
 import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const TopApps = () => {
   const apps = [
@@ -98,12 +100,13 @@ const TopApps = () => {
             </div>
           ))}
         </div>
-        <button
-          className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300"
-          onClick={() => (window.location.href = "/all-apps")}
-        >
-          Show All
-        </button>
+        <Link
+  to="/all-apps"
+  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 inline-block"
+>
+  Show All
+</Link>
+
       </div>
     </section>
   );
